@@ -1,0 +1,131 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
+.cart {
+  padding-top: 130px;
+  background: $clr-1;
+  min-height: 100svh;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__products {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      justify-content: space-between;
+      align-items: center;
+      background: $clr-4;
+      color: $clr-1;
+      border-radius: 10px;
+      padding: 10px;
+
+      @media screen and (max-width: 480px) {
+        flex-direction: column;
+      }
+
+      &-desc {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        @media screen and (max-width: 576px) {
+          flex-direction: column;
+        }
+
+        &-img {
+          max-width: 200px;
+          max-height: 200px;
+        }
+
+        &-title {
+          font-size: 22px;
+          color: $clr-1;
+          text-align: center;
+        }
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 15px;
+
+        @media screen and (max-width: 576px) {
+          grid-column: span 2;
+          align-items: center;
+        }
+
+        @media screen and (max-width: 480px) {
+          grid-column: unset;
+        }
+
+        &-btn {
+          font-weight: $fw-1;
+          font-size: $fs-1;
+          color: $clr-3;
+          padding: 5px 19px;
+          border: 1px solid $clr-4;
+          cursor: pointer;
+          background: $clr-1;
+          transition: 0.3s;
+          border-radius: 5px;
+
+          &:hover {
+            background: $clr-5;
+          }
+        }
+
+        &-price {
+          font-size: $fs-2;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: $fs-2;
+    font-weight: $fw-2;
+  }
+
+  &__info {
+    width: 92%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: center;
+
+    &-btn {
+      font-weight: $fw-1;
+      font-size: $fs-3;
+      color: $clr-3;
+      padding: 5px 19px;
+      border: 1px solid $clr-4;
+      cursor: pointer;
+      background: transparent;
+      border-radius: 10px;
+      transition: 0.3s;
+
+      &:hover {
+        color: $clr-1;
+        background: $clr-4;
+      }
+    }
+
+    &-total {
+      font-weight: $fw-2;
+      font-size: $fs-3;
+    }
+  }
+}

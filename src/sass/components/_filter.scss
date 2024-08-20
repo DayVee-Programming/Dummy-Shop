@@ -1,0 +1,73 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
+.filter {
+  padding-bottom: 50px;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    display: flex;
+    gap: 10px 35px;
+    align-items: center;
+    position: relative;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+
+    &-select {
+      background: $clr-1;
+      padding: 12px 44px 12px 10px;
+      font-weight: $fw-1;
+      font-size: $fs-1;
+      color: $clr-2;
+      border: none;
+      appearance: none;
+      cursor: pointer;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    &-img {
+      position: absolute;
+      top: 15px;
+      left: 130px;
+      width: 15px;
+      cursor: pointer;
+      height: 12px;
+    }
+
+    &-btn {
+      padding: 12px 20px;
+      background: $clr-1;
+      font-weight: $fw-1;
+      font-size: $fs-1;
+      color: $clr-2;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+
+  &__info {
+    padding: 12px 10px;
+    background: $clr-1;
+    border-radius: 5px;
+
+    & span {
+      font-weight: $fw-1;
+      font-size: $fs-1;
+      color: $clr-2;
+    }
+  }
+}

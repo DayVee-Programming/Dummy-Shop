@@ -1,0 +1,137 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
+.more {
+  background: $clr-1;
+  min-height: 100svh;
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 120px 15px 50px;
+    overflow: hidden;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      padding: 75px 15px 30px;
+    }
+  }
+
+  &__slider {
+    width: min(100%, 450px);
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+    .slick-arrow:hover::before {
+      color: $clr-6;
+    }
+
+    .slick-arrow::before {
+      font-size: $fs-6;
+      transition: 0.3s;
+      color: $clr-5;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+
+      &-img {
+        max-width: 400px;
+        max-height: 400px;
+      }
+    }
+  }
+
+  &__img {
+    width: clamp(18.75rem, 13.95rem + 13.33vw, 25rem);
+    max-height: 400px;
+  }
+
+  &__info {
+    width: min(100%, 550px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+
+    &-title {
+      font-weight: $fw-2;
+      font-size: $fs-3;
+      color: $clr-3;
+    }
+
+    &-desc {
+      font-weight: $fw-1;
+      font-size: $fs-5;
+      color: $clr-3;
+    }
+
+    &-prices {
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+
+      &-dprice {
+        font-weight: $fw-1;
+        font-size: $fs-3;
+        color: $clr-3;
+      }
+
+      &-discount {
+        font-weight: $fw-1;
+        font-size: $fs-1;
+      }
+
+      &-price {
+        font-weight: $fw-1;
+        font-size: $fs-1;
+        color: $clr-5;
+        text-decoration: line-through;
+      }
+
+      &-stock {
+        font-weight: $fw-1;
+        font-size: $fs-1;
+        color: $clr-3;
+      }
+    }
+
+    &-rating {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      &-img {
+        max-width: 25px;
+        max-height: 25px;
+      }
+    }
+
+    &-stock {
+      font-weight: $fw-1;
+      font-size: $fs-1;
+      color: $clr-3;
+    }
+
+    &-btn {
+      font-weight: $fw-1;
+      font-size: $fs-1;
+      color: $clr-3;
+      padding: 5px 19px;
+      border: 1px solid $clr-4;
+      cursor: pointer;
+      background: transparent;
+      transition: 0.3s;
+      border-radius: 5px;
+
+      &:hover {
+        color: $clr-1;
+        background: $clr-4;
+      }
+    }
+  }
+}

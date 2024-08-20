@@ -1,0 +1,52 @@
+$clr-1: #fff;
+$clr-2: #000;
+$clr-3: #062f42;
+$clr-4: #005c67;
+$clr-5: #bababa;
+$clr-6: #ff0000;
+$clr-7: #fcf9f9;
+
+$ff-1: "Montserrat", sans-serif;
+$fw-1: 400;
+$fw-2: 700;
+$fs-1: 16px;
+$fs-2: 22px;
+$fs-3: 20px;
+$fs-4: 24px;
+$fs-5: 18px;
+$fs-6: 30px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: $ff-1;
+  font-weight: $fw-1;
+}
+
+body {
+  background: $clr-5;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  width: min(100%, 1326px);
+  height: 100%;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
