@@ -5,10 +5,6 @@ const initialState = {
   links: [
     {
       id: v4(),
-      text: "Latest",
-    },
-    {
-      id: v4(),
       text: "Categories",
       to: "/categories",
     },
@@ -20,10 +16,12 @@ const initialState = {
     {
       id: v4(),
       text: "Contact",
+      to: "/contact",
     },
     {
       id: v4(),
       text: "About us",
+      to: "/about",
     },
   ],
 };

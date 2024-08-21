@@ -1,0 +1,77 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
+.contact {
+  min-height: 100svh;
+  padding-block: 90px 50px;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__title {
+    border-radius: 5px;
+    color: $clr-1;
+    font-weight: $fw-2;
+    font-size: $fs-6;
+  }
+
+  &__info {
+    width: min(100%, 500px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: $clr-1;
+    padding: 5px 10px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+
+    &-socials {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      &-img {
+        max-width: 25px;
+        max-height: 25px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__form {
+    width: min(100%, 500px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &-input,
+    &-textarea,
+    &-btn {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: $fs-1;
+    }
+
+    &-textarea {
+      resize: none;
+    }
+
+    &-btn {
+      width: min(100%, 150px);
+      font-size: $fs-1;
+      cursor: pointer;
+      margin-inline: auto;
+      background: $clr-1;
+    }
+  }
+}

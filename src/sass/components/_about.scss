@@ -1,0 +1,43 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
+.about {
+  min-height: 100svh;
+  padding-block: 120px 50px;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px 15px;
+    background: $clr-1;
+    padding-block: 15px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    border-radius: 10px;
+    padding: 10px;
+
+    &-title {
+      font-size: $fs-6;
+      font-weight: $fw-2;
+    }
+
+    &-text {
+      font-size: $fs-3;
+    }
+  }
+}

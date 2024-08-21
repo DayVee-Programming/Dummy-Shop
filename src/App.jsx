@@ -3,6 +3,8 @@ import Products from "./pages/Products";
 import More from "./pages/More";
 import Cart from "./pages/Cart";
 import Categories from "./pages/Categories";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/:category/:page" element={<Categories />} />
         <Route path="/discount" element={<Products type="discount" />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route path="*" element={<Products type="home" />} />
       </Routes>
     </>
